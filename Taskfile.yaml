@@ -1,0 +1,12 @@
+version: 3
+
+silent: true
+
+tasks:
+  install:
+    cmds:
+      - pip install -U -r requirements.txt
+  run:
+    cmds:
+      - |
+        streamlit run --browser.gatherUsageStats false --server.port 5000 --server.headless true --server.runOnSave true --theme.primaryColor "crimson" src/app.py
